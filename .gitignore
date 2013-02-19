@@ -1,0 +1,80 @@
+package helloworld;
+import java.util.Scanner;
+import java.util.Random; 
+
+public class HelloWorld
+{
+   public static void main(String[] args)
+	{
+		Scanner scan = new Scanner(System.in);
+		Random randnum = new Random();
+		int comnum= randnum.nextInt(3);
+                int yourchoice=0;
+                int quit=0;
+		while(yourchoice!=4)
+		{
+			System.out.println("Put in a 1 for rock.");
+			System.out.println("Put in a 2 for paper.");
+			System.out.println("Put in a 3 for scissors.");
+			System.out.println("Put in a 4 for to quit.");
+			yourchoice = scan.nextInt();
+                        comnum=randnum.nextInt(3)+1;
+			switch(yourchoice)
+                        {
+                            case 1:
+                                if(comnum==1)
+                                {
+                                    System.out.println("Both have rocks !");
+                                }
+                                if(comnum==2)
+                                {
+                                    System.out.println("Your rock is covered by their paper!");
+                                }
+                                if(comnum==3)
+                                {
+                                    System.out.println("You smashed their scissors");
+                                }
+                                break;
+                            case 2:
+                                 if(comnum==1)
+                                {
+                                    System.out.println("Your paper covers their rock.");
+                                }
+                                if(comnum==2)
+                                {
+                                    System.out.println("Both have paper");
+                                }
+                                if(comnum==3)
+                                {
+                                    System.out.println("Your paper is cut by your scissors!");
+                                }
+                                break;
+                            case 3:
+                                 if(comnum==1)
+                                {
+                                    System.out.println("Their rock smaches your scissors");
+                                }
+                                if(comnum==2)
+                                {
+                                    System.out.println("You cut their paper");
+                                }
+                                if(comnum==3)
+                                {
+                                    System.out.println("Both have scissors");
+                                }
+                                break;
+                            case 4:
+                                quit=4;
+                                break;
+                            default:
+                                break;
+                        }
+			                      if(quit==4)
+                        {
+                            break;
+                        }
+		}
+	}
+}
+
+
